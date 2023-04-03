@@ -1,0 +1,16 @@
+<body align="center">
+	<input placeholder="Enter some text" name="name" />
+	<br>
+	<img id="image" src="">
+	<script>
+		const input = document.querySelector("input");
+		const img = document.getElementById("image");
+		input.addEventListener("input", updateValue);
+		function updateValue(e) {
+			if(e.target.value != "") {
+	  			img.src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl="+encodeURIComponent(e.target.value)
+	  		} else {
+	  			img.src=""
+	  		}
+		}
+	</script>
